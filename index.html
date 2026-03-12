@@ -1,97 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | ShellSharp</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="main.js"></script>
+    <title>Home | ShellSharp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="SSLogo.svg"> 
+    
+    <!-- Open Graph (social media embed) -->
+    <meta content="ShellSharp" property="og:title">
+    <meta content="The official ShellSharp home page" property="og:description">
+    <meta content="https://shellsharp.com/" property="og:url">
+    <meta property="og:image" content="https://shellsharp.com/SSLogo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
 </head>
 <body>
-    <!--Side panel-->
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="close-menu" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-    </div>
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <div class="title">
-            <a href="/" style="text-decoration: none; color: white;">
-                <div class="name">
-                    <img src="SSLogo.svg">
-                    <p>ShellSharp</p>
-                </div>
-            </a>
-        </div>
-        <button class="open-menu" onclick="openNav()">
-            <img class="menu" src="menu-icon.png">
+    <div class="navBar">
+        <button class="titleButton" onclick="selectTab(0)">
+            <img id="logo" src="SSLogo.svg">
+            <div class="siteTitle">
+                <p id="title">ShellSharp</p>
+                <p id="extension">.com</p>
+            </div>
         </button>
-    </div>
-    <div class="glow-light"></div>
-
-    <p class="description">ShellSharp is a small group of individuals passionate for the realm of games.
-        We shoot to make unique games that you wont get bored of.
-        We share our development progress through youtube devlogs, even if we dont upload consistently.
-        At this time we do not have any games released because OdysseyDev is our only developer.
-        Be sure to check the <i>Games</i> tab for updates on game releases.
-    </p>
-    <div class="team">
-        <p class="team-title">SHELLSHARP<br>TEAM</p>
-        <div class="team-container">
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="OdysseyDev.png">
-                </div>
-                <div class="member-header">
-                    <h3 class="member-name">OdysseyDev</h3>
-                    <p class="member-quote">"Wineboom"</p>
-                </div>
-                <p class="member-social">
-                    <a href="https://twitter.com/OdysseyDev_">
-                        @OdysseyDev_
-                    </a>
-                </p>
-                <p class="member-email">odysseydev@shellsharp.com</p>
-                <p class="member-title">Game Design</p>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="easfrq.gif">
-                </div>
-                <div class="member-header">
-                    <h3 class="member-name">Easfrq</h3>
-                    <p class="member-quote">"Doing things since 1847"</p>
-                </div>
-                <p class="member-social">
-                    <a href="https://easfrq.live/">
-                        @Easfrq
-                    </a>
-                </p>
-                <p class="member-email">macintoshing26@outlook.com</p>
-                <p class="member-title">Game Tester</p>
-            </div>
+        <div class="separator"></div>
+        <div class="pages">
+            <button id="disabled" class="pageButton-active">
+                <p class="buttonText">Home</p>
+            </button>
+            <button class="pageButton">
+                <p class="buttonText">Friends</p>
+            </button>
+            <button class="pageButton">
+                <p class="buttonText">Projects</p>
+            </button>
         </div>
     </div>
-    <div class="glow-light-2"></div>
-    <div class="footer">
-        <div class="rss-socials">
-            <a href="https://youtube.com/@shellsharpinc.">
-                <img src="youtube.png">
-            </a>
-            <a href="https://twitter.com/@RSStudios__">
-                <img src="twitter.png">
-            </a>
-            <a href="https://discord.gg/ruRsDhWqpQ">
-                <img src="discord.png">
-            </a>
-            <a href="mailto:roughlysmoothstudios@gmail.com">
-                <img src="email.png">
-            </a>
-        </div>
-        <div class="copyright">
-            <p>@ 2024 ShellSharp Inc.</p>
-        </div>
+    <div class="about">
+        <p class="sectionTitle">What is ShellSharp?</p>
+        <div class="sectionLine"></div>
+        <p class="sectionParagraph">ShellSharp is a theoretical indie game studio created by Vitalux. 
+            In the future I hope to make it an official business and hire a team of passionate programmers, 
+            designers, writers, and music producers to create games using pure human collaboration.</p>
+    </div>
+    <div class="about">
+        <p class="sectionTitle">Who is Vitalux?</p>
+        <div class="sectionLine"></div>
+        <p class="sectionParagraph">I am a 17 year old game developer, meaning I design, write, and produce
+            music for my games.
+        </p>
+        <p class="sectionParagraph">
+        </p>
+        <p class="sectionParagraph">I have a strict NO AI policy in <u>my work</u>, so you can trust that 
+            any game I make (or that shellsharp makes in the future) will be made entirely with human 
+            creativity.
+        </p>
+        <p class="sectionParagraph">I am going to an art college studying game design. I have 6 years 
+            of experience playing the trumpet and a few months playing the tuba.
+        </p>
     </div>
 </body>
-</html> 
+</html>

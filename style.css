@@ -1,336 +1,213 @@
-html {
-  font-family: Ubuntu-Bold;
-}
-@font-face {
-  font-family: Ubuntu-Bold;
-  src: url(Ubuntu-Bold.ttf);
-}
-@font-face {
-  font-family: Ubuntu-Regular;
-  src: url(Ubuntu-Regular.ttf);
-}
-@font-face {
-  font-family: Ubuntu-Light;
-  src: url(Ubuntu-Light.ttf);
-}
 body {
-  background-color: rgb(21,21,21);
-  display: flex;
-  color: white;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  min-height: 100vh;
+    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/debut_light.png);
+    background-size: 20vw;
+    background-blend-mode: color-burn;
+    background-color: rgb(37, 37, 38);
+    padding: 0;
+    margin: 0;
 }
-.body-light-mode {
-  background-color: rgb(234,234,234);
-  color:black;
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(Ubuntu-Regular.ttf);
 }
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(Ubuntu-Medium.ttf);
+    font-weight: bold;
+}
+
 p {
-  margin: 0;
-  padding: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 10vh;
+
+    font-family: Ubuntu;
 }
-.top-bar {
-  display: flex;
-  width: 100%;
-  background-color: black;
-  justify-content: space-between;
-  border-bottom: white;
-  border-bottom-style: solid;
-  animation: borderChange 1s ease-in-out;
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: rgb(50, 52, 52);
+
+    height: auto;
+    min-width: 100%;
 }
-.name {
-  display: flex;
-  align-items: center;
-  font-size: 30pt;
-  user-select: none;
+
+.titleButton {
+    position: relative;
+
+    padding: 1vw;
+    margin: 0;
+    
+    background-color: rgb(49, 51, 52);
+    color: rgb(245, 245, 245);
+
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+    border-style: groove;
+
+    overflow: visible;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    transition: linear 100ms;
 }
-.name img {
-  height: 60px;
-  padding: 10px;
-}
-/* The sidepanel menu */
-.sidepanel {
-  height: 100%; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  right: 0;
-  background-color: #000000; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  padding-bottom: 100%;
-  border-right-width: 0px;
-}
-  
-  /* The sidepanel links */
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
-  
-  /* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  color: #818181;
-}
-  
-  /* Position and style the close button (top right corner) */
-.sidepanel .close-menu {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-  /* Style the button that is used to open the sidepanel */
-.open-menu {
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  padding-inline: 20px;
-  border: none;
-  user-select: none;
-  margin: 0px;
-  transition: 0.125s;
-}
-.open-menu:hover {
-  background-color: rgba(0, 64, 148, 0.5);
-}
-.menu {
-  width: 25px;
-}
-.glow-light {
-  height: 80px;
-  background: linear-gradient(rgba(0, 64, 148, 0.5) 0%, transparent 80%);
-  animation: gradientChange 0.75s ease-in-out;
-}
-@keyframes gradientChange {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes borderChange {
-  0% {
-    border-color: rgb(75, 75, 75);
-  }
-  100% {
-    border-color: white;
-  }
-}
-.description {
-  width: auto;
-  font-size: 35px;
-  padding-inline: 8%;
-  padding-top: 8%;
-  padding-bottom: 14%;
-  font-family: Ubuntu-Regular;
-  text-shadow: 0px 0px 11px rgb(0, 110, 255);
-  color: white;
-  animation: shadowChange 0.75s ease-in-out;
-}
-@keyframes shadowChange {
-  0% {
-    text-shadow: 0px 0px 0px rgba(0, 110, 255, 0);
-    color: rgb(75, 75, 75);
-  }
-  100% {
-    text-shadow: 0px 0px 10px rgb(0, 110, 255);
+.titleButton:hover, .titleButton:active {
     color: white;
-  }
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background-color: rgb(73, 76, 78);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+
+    border-style: outset;
 }
-@keyframes blueChange {
-  0% {
-    text-shadow: 0px 0px 0px rgba(0, 110, 255, 0);
-    color: rgb(75, 75, 75);
-  }
-  100% {
-    text-shadow: 0px 0px 10px rgb(0, 110, 255);
-    color: rgb(119, 155, 255);
-  }
+
+.siteTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
 }
-.team {
-  width: 100%; height: auto;
-  margin-bottom: 10%;
+
+#title {
+    font-weight: bold;
+    font-size: 2.5vw;
 }
-.team-title {
-  margin-top: 1%;
-  font-family: Ubuntu-Regular;
-  font-size: 65px;
-  text-align: center;
-  text-shadow: 0px 0px 21px rgb(0, 110, 255);
-  color: white;
-  animation: shadowChange 0.75s ease-in-out;
+#extension {
+    font-size: 2vw;
 }
-.team-container {
-  padding-inline: 2.5%;
-  padding-block: 2.5%;
-  display: flex;
-  flex-direction: row;
-  gap: 2.5%;
-  justify-content: center;
+#logo {
+    justify-self: center;
+    align-self: center;
+    
+    margin-right: 0.5vw;
+    width: 3vw;
 }
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items:start;
-  text-align: center;
-  padding-bottom: 2.5%;
-  background-color: black;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 33%;
-}
-.member-image {
-  width: 100%;
-}
-.member-image img {
-  width: 100%;
-}
-.member-header {
-  width: 100%;
-  padding-top: 5%;
-  display: flex;
-  align-items: center;
-}
-.member-name {
-  font-family: Ubuntu-Regular;
-  margin: 0;
-  margin-left: 5%;
-  margin-right: auto;
-  font-size: 28px;
-  text-shadow: 0px 0px 9px rgb(0, 110, 255);
-  animation: shadowChange 0.75s ease-in-out;
-}
-.member-quote {
-  margin-right: 5%;
-  font-size: 20px;
-  text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
-  animation: shadowChange 0.75s ease-in-out;
-}
-.member-title {
-  font-family: Ubuntu-Regular;
-  margin: 0;
-  margin-top: 5%;
-  margin-left: 5%;
-  font-size: 40px;
-  text-shadow: 0px 0px 12px rgb(0, 110, 255);
-  animation: shadowChange 0.75s ease-in-out;
-}
-.member-social {
-  font-family: Ubuntu-Regular;
-  font-size: 20px;
-  margin: 0;
-  margin-left: 5%;
-}
-.member-email {
-  font-family: Ubuntu-Regular;
-  font-size: 20px;
-  margin: 0;
-  margin-left: 5%;
-  text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
-  animation: shadowChange 0.75s ease-in-out;
-}
-.member-social a {
-  text-decoration: none;
-  text-decoration-color: rgb(119, 155, 255);
-  color: rgb(119, 155, 255);
-  text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
-  animation: blueChange 0.75s ease-in-out;
-}
-.footer {
-  height: 80px;
-  background-color: black;
-  border-top: white solid;
-  animation: borderChange 1s ease-in-out;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.rss-socials {
-  margin: 10px;
-  display: flex;
-}
-.rss-socials img {
-  width: 50px;
-  margin: 5px;
-  transition: 0.3s;
-}
-.rss-socials img:hover {
-  transform: scale(1.125);
-}
-.glow-light-2 {
-  height: 80px;
-  background: linear-gradient(0turn, rgba(0, 64, 148, 0.5) 0%, transparent 80%);
-  animation: gradientChange2 0.75s ease-in-out;
-}
-.copyright {
-  display: flex;
-  align-items: center;
-  padding-inline: 10px;
-}
-.copyright p {
-  margin: 0;
-}
-@keyframes gradientChange2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media (max-width: 900px) {
-  .name {
-    font-size: 35px;
-  }
-  .name img {
-    height: 60px;
-  }
-  .menu {
-    width: 20px;
-  }
-  .description {
-    font-size: 25px;
-    padding-inline: 10%;
-  }
-  .team-title {
-    font-size: 50px;
-  }
-  .team-member {
+
+/* The block inbetween the tab buttons and the siteTitle that only exists for the inset shadow */
+.separator {
+    flex: 1;
     width: 100%;
-  }
+    min-height: 100%;
+
+    border-bottom: solid 1px;
+    border-color: #545454;
+    background-color: rgb(57, 60, 60);
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.1);
 }
-@media (max-width: 600px) {
-  .name {
-    font-size: 26px;
-  }
-  .name img {
-    height: 50px;
-  }
-  .description {
-    font-size: 20px;
-    padding-inline: 10%;
-  }
-  .team-title {
-    font-size: 35px;
-  }
-  .team-container {
+
+/* Page Selector */
+.pages {
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.pageButton {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style:groove;
+    border-color: black;
+
+    padding-inline: 2vw;
+    margin: 0;
+    height: 100%;
+    
+    background-color: rgb(49, 51, 52);
+    color: rgb(245, 245, 245);
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+.pageButton:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background-color: rgb(73, 76, 78);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+
+    border-style: outset;
+}
+.pageButton:active {
+    border-style: inset;
+}
+
+/* While :active is an identifier for the button, .pageButton-active is just 
+a version of the button that cannot be clicked and appears to be pressed down */
+.pageButton-active {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style: inset;
+    border-color: black;
+
+    padding-inline: 2vw;
+    margin: 0;
+    height: 100%;
+    
+    background-color: rgb(44, 46, 46);
+    color: rgb(245, 245, 245);
+    box-shadow: inset 0 0 15px 10px rgba(64, 64, 64, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+.buttonText {
+    font-size: 1.5vw;
+}
+
+/* Now this is the actual page contents, when making a new page ignore the navbar */
+.about {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  .team-member {
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(204, 204, 204);
+
+    margin-top: 2.5vw;
+    margin-inline: 2.5vw;
+}
+.sectionTitle {
+    margin-right: auto;
+    padding-left: 1vw;
+    padding-top: 1vw;
+
+    font-size: 2vw;
+    font-weight: bold;
+}
+.sectionLine{
     width: 100%;
-  }
-  .rss-socials img {
-    width: 35px;
-  }
+    height: 0.5vh;
+    background-color: rgb(204, 204, 204);
+}
+.sectionParagraph {
+    padding-top: 1vw;
+    padding-inline: 1vw;
+    margin-right: auto;
+
+    font-size: 1.5vw;
 }
