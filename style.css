@@ -1,10 +1,13 @@
 body {
-    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/debut_light.png);
-    background-size: 20vw;
+    background-image: url(bgnoise_lg.png);
+    background-color: rgb(60, 60, 61);
     background-blend-mode: color-burn;
-    background-color: rgb(37, 37, 38);
     padding: 0;
     margin: 0;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 @font-face {
@@ -35,6 +38,7 @@ p {
     margin: 0;
 
     background-color: rgb(50, 52, 52);
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.2);
 
     height: auto;
     min-width: 100%;
@@ -43,15 +47,17 @@ p {
 .titleButton {
     position: relative;
 
-    padding: 1vw;
+    padding: 0.75vw;
     margin: 0;
     
-    background-color: rgb(49, 51, 52);
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
     color: rgb(245, 245, 245);
 
     box-sizing: border-box;
     box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+    border-color: rgb(73, 76, 78);
     border-style: groove;
+    border-width: 0.25vw;
 
     overflow: visible;
 
@@ -65,8 +71,9 @@ p {
 .titleButton:hover, .titleButton:active {
     color: white;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    background-color: rgb(73, 76, 78);
-    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+    border-color: rgb(73, 76, 78);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
 
     border-style: outset;
 }
@@ -79,17 +86,17 @@ p {
 
 #title {
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 #extension {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 #logo {
     justify-self: center;
     align-self: center;
     
     margin-right: 0.5vw;
-    width: 3vw;
+    width: 2.5vw;
 }
 
 /* The block inbetween the tab buttons and the siteTitle that only exists for the inset shadow */
@@ -99,10 +106,10 @@ p {
     min-height: 100%;
 
     border-bottom: solid 1px;
-    border-color: #545454;
-    background-color: rgb(57, 60, 60);
+    border-color: rgb(73, 76, 78);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
     box-sizing: border-box;
-    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.1);
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Page Selector */
@@ -123,13 +130,14 @@ p {
     user-select: none;
 
     border-style:groove;
-    border-color: black;
+    border-color: rgb(73, 76, 78);
+    border-width: 0.25vw;
 
     padding-inline: 2vw;
     margin: 0;
     height: 100%;
     
-    background-color: rgb(49, 51, 52);
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
     color: rgb(245, 245, 245);
     box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
 
@@ -140,13 +148,16 @@ p {
 .pageButton:hover {
     color: white;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    background-color: rgb(73, 76, 78);
-    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
 
     border-style: outset;
 }
 .pageButton:active {
     border-style: inset;
+
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 10px 5px rgba(160, 160, 160, 0.1);
 }
 
 /* While :active is an identifier for the button, .pageButton-active is just 
@@ -161,15 +172,17 @@ a version of the button that cannot be clicked and appears to be pressed down */
     user-select: none;
 
     border-style: inset;
-    border-color: black;
+    border-color: rgb(73, 76, 78);
+    border-width: 0.25vw;
 
     padding-inline: 2vw;
     margin: 0;
     height: 100%;
     
-    background-color: rgb(44, 46, 46);
+    background: linear-gradient(to bottom, #2c2c2d 0%,#313334 17%,#313334 35%,#2c2c2d 81%,#222223 100%);
     color: rgb(245, 245, 245);
-    box-shadow: inset 0 0 15px 10px rgba(64, 64, 64, 0.3), 0 0 10px 5px rgba(43, 48, 50, 0.5);
+    box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 30px 5px rgba(255, 255, 255, 0.171);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 
     overflow: visible;
 
@@ -201,7 +214,8 @@ a version of the button that cannot be clicked and appears to be pressed down */
 }
 .sectionLine{
     width: 100%;
-    height: 0.5vh;
+    height: 0;
+    border-bottom: 0.25vw ridge rgb(73, 76, 78);
     background-color: rgb(204, 204, 204);
 }
 .sectionParagraph {
@@ -210,4 +224,27 @@ a version of the button that cannot be clicked and appears to be pressed down */
     margin-right: auto;
 
     font-size: 1.5vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /*padding-block: 0.75vw;*/
+    margin-top: auto;
+
+    background-color: rgb(50, 52, 52);
+    /*box-shadow:  0 0 10px 5px rgba(0, 0, 0, 0.2);*/
+    box-shadow:  0 0 30px 20px rgba(0, 0, 0, 0.2);
+
+    font-size: 10vw;
+
+    /*min-height: 3.25vw;*/
+    height: 0vh;
+    min-width: 100vw;
+}
+
+.sizeSetter {
+    width: 2.5vw;
 }

@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+
     <script src="main.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        window.onload = () => {
+            $(function(){
+            $('#home').load('/home.html'); 
+            });
+        }
+
+        $(function(){
+          $("#home").load("/home.html"); 
+        });
+        $(function(){
+          $("#friends").load("/friends.html"); 
+        });
+        $(function(){
+          $("#projects").load("/projects.html"); 
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css">
     <title>Home | ShellSharp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="SSLogo.svg"> 
@@ -27,39 +47,24 @@
         </button>
         <div class="separator"></div>
         <div class="pages">
-            <button id="disabled" class="pageButton-active">
+            <button id="buttonHome" onmousedown="pageHome()" class="pageButton-active">
                 <p class="buttonText">Home</p>
             </button>
-            <button class="pageButton">
+            <button id="buttonFriends" onmousedown="pageFriends()" class="pageButton">
                 <p class="buttonText">Friends</p>
             </button>
-            <button class="pageButton">
+            <button id="buttonProjects" onmousedown="pageProjects()" class="pageButton">
                 <p class="buttonText">Projects</p>
             </button>
         </div>
     </div>
-    <div class="about">
-        <p class="sectionTitle">What is ShellSharp?</p>
-        <div class="sectionLine"></div>
-        <p class="sectionParagraph">ShellSharp is a theoretical indie game studio created by Vitalux. 
-            In the future I hope to make it an official business and hire a team of passionate programmers, 
-            designers, writers, and music producers to create games using pure human collaboration.</p>
+    <div class="section">
+        <div style="display: none;" id="home"></div>
+        <div style="display: none;" id="friends"></div>
+        <div style="display: none;" id="projects"></div>
     </div>
-    <div class="about">
-        <p class="sectionTitle">Who is Vitalux?</p>
-        <div class="sectionLine"></div>
-        <p class="sectionParagraph">I am a 17 year old game developer, meaning I design, write, and produce
-            music for my games.
-        </p>
-        <p class="sectionParagraph">
-        </p>
-        <p class="sectionParagraph">I have a strict NO AI policy in <u>my work</u>, so you can trust that 
-            any game I make (or that shellsharp makes in the future) will be made entirely with human 
-            creativity.
-        </p>
-        <p class="sectionParagraph">I am going to an art college studying game design. I have 6 years 
-            of experience playing the trumpet and a few months playing the tuba.
-        </p>
+    <div class="footer">
+        <!-- <img id="sizeSetter"> -->
     </div>
 </body>
 </html>
