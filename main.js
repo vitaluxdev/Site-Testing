@@ -7,8 +7,10 @@ function pageHome() {
         var button = document.getElementById(buttons[index]);
 
         if (id === "home") {
+            section.style.display = 'block';
             button.setAttribute('class', 'pageButton-active');
         } else {
+            section.style.display = 'none';
             button.setAttribute('class', 'pageButton');
         }
     });
@@ -23,8 +25,10 @@ function pageFriends() {
         var button = document.getElementById(buttons[index]);
 
         if (id === "friends") {
+            section.style.display = 'block';
             button.setAttribute('class', 'pageButton-active');
         } else {
+            section.style.display = 'none';
             button.setAttribute('class', 'pageButton');
         }
     });
@@ -39,8 +43,10 @@ function pageProjects() {
         var button = document.getElementById(buttons[index]);
 
         if (id === "projects") {
+            section.style.display = 'block';
             button.setAttribute('class', 'pageButton-active');
         } else {
+            section.style.display = 'none';
             button.setAttribute('class', 'pageButton');
         }
     });

@@ -1,5 +1,5 @@
 body {
-    background-image: url(bgnoise_lg.png);
+    background-image: url(Img/bgnoise_lg.png);
     background-color: rgb(60, 60, 61);
     background-blend-mode: color-burn;
     padding: 0;
@@ -224,6 +224,116 @@ a version of the button that cannot be clicked and appears to be pressed down */
     margin-right: auto;
 
     font-size: 1.5vw;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 4vw;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: auto;
+    padding: 0;
+}
+.profilePhoto {
+    margin-right: auto;
+    padding-block: 4vw;
+    padding-inline: 4vw;
+
+    width: 40vw;
+}
+.profileImg {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+}
+.profileDesc {
+    color: white;
+    width: 100%;
+
+    padding-right: 4vw;
+}
+.profileName {
+    padding-top: 2vw;
+    font-size: 4vw;
+    font-weight: bold;
+}
+.profileTitle {
+    padding-top: 1.5vw;
+    font-size: 3vw;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-inline: 2vw;
+}
+.projectImage {
+    margin-right: auto;
+    padding-block: 4vw;
+    padding-inline: 4vw;
+
+    width: 80%;
+}
+
+.projectImage button {
+    display: flex;
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+
+    border-color: rgb(73, 76, 78);
+    border-width: 0.5vw;
+    border-style: groove;
+}
+.projectImage button:hover {
+    border-color: rgb(73, 76, 78);
+    border-width: 0.5vw;
+    border-style: outset;
+}
+.projectImage button:active {
+    border-color: rgb(73, 76, 78);
+    border-width: 0.5vw;
+    border-style: inset;
+}
+
+.projectImage button img {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+}
+.projectDescription {
+    color: white;
+    width: 100%;
+
+    padding-right: 4vw;
+}
+.projectName {
+    padding-top: 2vw;
+    font-size: 4vw;
+    font-weight: bold;
+}
+.projectPara {
+    padding-top: 1.5vw;
+    font-size: 2.5vw;
 }
 
 .footer {
