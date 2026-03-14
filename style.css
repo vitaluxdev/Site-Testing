@@ -303,11 +303,17 @@ a version of the button that cannot be clicked and appears to be pressed down */
     border-color: rgb(73, 76, 78);
     border-width: 0.5vw;
     border-style: groove;
+    background-color: transparent;
+
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.3);
+
+    transition: linear 100ms;
 }
 .projectImage button:hover {
     border-color: rgb(73, 76, 78);
     border-width: 0.5vw;
     border-style: outset;
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 .projectImage button:active {
     border-color: rgb(73, 76, 78);
@@ -319,6 +325,7 @@ a version of the button that cannot be clicked and appears to be pressed down */
     width: 100%;
     margin: 0vw;
     padding: 0vw;
+    z-index: -1;
 }
 .projectDescription {
     color: white;
