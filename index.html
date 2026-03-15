@@ -6,7 +6,7 @@
     <script src="jquery.js"></script>
     <script>
         $(function(){
-          $("#home").load("/friends.html"); 
+          $("#home").load("/home.html"); 
         });
         $(function(){
           $("#friends").load("/friends.html"); 
@@ -31,34 +31,36 @@
     <meta property="og:image:height" content="256">
 </head>
 <body>
-    <div class="navBar">
-        <button class="titleButton">
-            <img id="logo" src="Img/SSLogo.svg">
-            <div class="siteTitle">
-                <p id="title">ShellSharp</p>
-                <p id="extension">.com</p>
+    <div class="pageContents">
+        <div class="navBar">
+            <button class="titleButton">
+                <img id="logo" src="Img/SSLogo.svg">
+                <div class="siteTitle">
+                    <p id="title">ShellSharp</p>
+                    <p id="extension">.com</p>
+                </div>
+            </button>
+            <div class="separator"></div>
+            <div class="pages">
+                <button id="buttonHome" onmousedown="pageHome()" class="pageButton-active">
+                    <p>Home</p>
+                </button>
+                <button id="buttonFriends" onmousedown="pageFriends()" class="pageButton">
+                    <p>Friends</p>
+                </button>
+                <button id="buttonProjects" onmousedown="pageProjects()" class="pageButton">
+                    <p>Projects</p>
+                </button>
             </div>
-        </button>
-        <div class="separator"></div>
-        <div class="pages">
-            <button id="buttonHome" onmousedown="pageHome()" class="pageButton-active">
-                <p>Home</p>
-            </button>
-            <button id="buttonFriends" onmousedown="pageFriends()" class="pageButton">
-                <p>Friends</p>
-            </button>
-            <button id="buttonProjects" onmousedown="pageProjects()" class="pageButton">
-                <p>Projects</p>
-            </button>
         </div>
-    </div>
-    <div class="section">
-        <div style="display: block;" id="home"></div>
-        <div style="display: none;" id="friends"></div>
-        <div style="display: none;" id="projects"></div>
-    </div>
-    <div class="footer">
-        <!-- <img id="sizeSetter"> -->
+        <div class="section">
+            <div style="display: block;" id="home"></div>
+            <div style="display: none;" id="friends"></div>
+            <div style="display: none;" id="projects"></div>
+        </div>
+        <div class="footer">
+            <!-- <img id="sizeSetter"> -->
+        </div>
     </div>
 </body>
 </html>

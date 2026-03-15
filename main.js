@@ -9,7 +9,8 @@ function pageHome() {
         if (id === "home") {
             section.style.display = 'block';
             button.setAttribute('class', 'pageButton-active');
-        } else {
+        } 
+        else {
             section.style.display = 'none';
             button.setAttribute('class', 'pageButton');
         }

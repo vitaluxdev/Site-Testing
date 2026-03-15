@@ -1,11 +1,17 @@
-body {
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.pageContents {
     background-image: url(Img/bgnoise_lg.png);
     background-color: rgb(60, 60, 61);
     background-blend-mode: color-burn;
-    padding: 0;
-    margin: 0;
 
+    box-sizing: border-box;
     min-height: 100%;
+
     display: flex;
     flex-direction: column;
 }
@@ -44,39 +50,6 @@ p {
     min-width: 100%;
 
     transition: linear 100ms;
-}
-@media screen and (max-width: 830px) {
-    .navBar {
-        flex-direction: column;
-    }
-    .titleButton {
-        z-index: 3;
-    }
-    .separator {
-        display: none;
-    }
-    .pages {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: blue;
-    }
-    .pageButton {
-        padding-block: 25px;
-        width: 33.3333%;
-        font-size: 20px;
-    }
-    .pageButton-active {
-        padding-block: 25px;
-        width: 33.3333%;
-        font-size: 20px;
-    }
-
-    .container {
-        display: grid;
-        grid-template: 
-        "a b"
-        "c d";
-    }
 }
 
 .titleButton {
@@ -197,7 +170,7 @@ p {
     box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 10px 5px rgba(160, 160, 160, 0.1);
 }
 .pageButton p {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* While :active is an identifier for the button, .pageButton-active is just 
@@ -230,7 +203,7 @@ a version of the button that cannot be clicked and appears to be pressed down */
     transition: linear 100ms;
 }
 .pageButton-active p {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* Now this is the actual page contents, when making a new page ignore the navbar */
@@ -242,13 +215,13 @@ a version of the button that cannot be clicked and appears to be pressed down */
     background-color: transparent;
     color: rgb(204, 204, 204);
 
-    margin-top: 2.5vw;
-    margin-inline: 2.5vw;
+    margin-top: 2.5%;
+    margin-inline: 2.5%;
 }
 .sectionTitle {
     margin-right: auto;
-    padding-left: 1vw;
-    padding-top: 1vw;
+    padding-left: 10px;
+    padding-top: 10px;
 
     font-size: 2vw;
     font-weight: bold;
@@ -256,12 +229,12 @@ a version of the button that cannot be clicked and appears to be pressed down */
 .sectionLine{
     width: 100%;
     height: 0;
-    border-bottom: 0.25vw ridge rgb(73, 76, 78);
+    border-bottom: 5px ridge rgb(73, 76, 78);
     background-color: rgb(204, 204, 204);
 }
 .sectionParagraph {
-    padding-top: 1vw;
-    padding-inline: 1vw;
+    padding-top: 25px;
+    padding-inline: 10px;
     margin-right: auto;
 
     font-size: 1.5vw;
@@ -284,12 +257,13 @@ a version of the button that cannot be clicked and appears to be pressed down */
     padding: 0;
 }
 .profileImage {
-
     margin-right: auto;
     padding-block: 25px;
     padding-inline: 25px;
 
     width: 30vw;
+
+    z-index: 1;
 }
 
 .profileImgButton {
@@ -393,15 +367,13 @@ a version of the button that cannot be clicked and appears to be pressed down */
 
     width: auto;
     height: auto;
-    padding: 0;
-    margin-inline: 2vw;
+    margin: 25px;
 }
 .projectImage {
-    margin-right: auto;
-    padding-block: 4vw;
-    padding-inline: 4vw;
 
     width: 80%;
+
+    z-index: 1;
 }
 
 .projectImage button {
@@ -411,7 +383,7 @@ a version of the button that cannot be clicked and appears to be pressed down */
     padding: 0vw;
 
     border-color: rgb(46, 48, 49);
-    border-width: 0.5vw;
+    border-width: 5px;
     border-style: groove;
     background-color: transparent;
 
@@ -420,13 +392,10 @@ a version of the button that cannot be clicked and appears to be pressed down */
     transition: linear 100ms;
 }
 .projectImage button:hover {
-    border-width: 0.5vw;
     border-style: outset;
     box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
 }
 .projectImage button:active {
-    border-color: rgb(73, 76, 78);
-    border-width: 0.5vw;
     border-style: inset;
 }
 
@@ -439,21 +408,21 @@ a version of the button that cannot be clicked and appears to be pressed down */
 .projectDescription {
     color: white;
     width: 100%;
-
-    padding-right: 4vw;
+    margin-inline: 25px;
 }
 .projectName {
-    padding-top: 2vw;
     font-size: 4vw;
     font-weight: bold;
 }
 .projectPara {
-    padding-top: 1.5vw;
+    padding-top: 25px;
     font-size: 2.5vw;
 }
 
 .footer {
     display: flex;
+
+    align-self: flex-end;
 
     /*padding-block: 0.75vw;*/
     margin-top: auto;
@@ -469,4 +438,179 @@ a version of the button that cannot be clicked and appears to be pressed down */
 
 .sizeSetter {
     width: 2.5vw;
+}
+
+@media screen and (max-width: 830px) {
+    .navBar {
+        flex-direction: column;
+    }
+    .titleButton {
+        z-index: 3;
+    }
+    .separator {
+        display: none;
+    }
+    .pages {
+        display: flex;
+        background-color: blue;
+    }
+    .pageButton {
+        padding-block: 20px;
+        width: 33.3333%;
+    }
+    .pageButton p {
+        font-size: 30px;
+    }
+    .pageButton-active {
+        padding-block: 20px;
+        width: 33.3333%;
+    }
+    .pageButton-active p {
+        font-size: 30px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: rgb(204, 204, 204);
+
+        margin-top: 25px;
+        margin-inline: 25px;
+    }
+    .sectionTitle {
+        margin-right: auto;
+        padding-left: 10px;
+        padding-top: 10px;
+
+        font-size: 4.5vw;
+        font-weight: bold;
+    }
+    .sectionLine{
+        width: 100%;
+        height: 0;
+        border-bottom: 5px ridge rgb(73, 76, 78);
+        background-color: rgb(204, 204, 204);
+    }
+    .sectionParagraph {
+        padding-top: 25px;
+        padding-inline: 10;
+        margin-right: auto;
+
+        font-size: 3vw;
+    }
+
+    .container {
+        display: grid;
+        grid-template:
+        "a"
+        "b"
+        "c"
+        "d";
+    }
+    .profileImage {
+        width: 50vw;
+    }
+    .profileDesc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    .profileName {
+        font-size: 6vw;
+        font-weight: bold;
+        padding-right: 0;
+    }
+    .profileTitle {
+        padding-top: 25px;
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .profileButton {
+        padding-inline: 10%;
+        padding-block: 0;
+        margin-top: 5%;
+        font-size: 4vw;
+        
+        background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+        color: white;
+        box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+        overflow: visible;
+
+        transition: linear 100ms;
+    }
+
+    .project {
+        display: grid;
+        grid-template: 
+        "a"
+        "b";
+        
+        margin: 0;
+        padding: 50px;
+    }
+    .projectImage {
+        width: 100%;
+        margin-right: auto;
+        background-color: pink;
+
+        z-index: 1;
+    }
+    .projectImage button {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        border-color: rgb(46, 48, 49);
+        border-style: groove;
+        background-color: transparent;
+
+        box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.3);
+
+        transition: linear 100ms;
+    }
+    .projectImage button:hover {
+        border-style: outset;
+        box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
+    }
+    .projectImage button:active {
+        border-style: inset;
+    }
+
+    .projectImage button img {
+        width: 100%;
+        z-index: -1;
+    }
+    .projectDescription {
+        color: white;
+        width: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+    .projectName {
+        padding-top: 25px;
+        padding-inline: 25px;
+        font-size: 4.5vw;
+        font-weight: bold;
+    }
+    .sectionLine{
+        width: 100%;
+        border-bottom: 5px ridge rgb(73, 76, 78);
+    }
+    .projectPara {
+        padding-top: 25px;
+        padding-inline: 25px;
+        font-size: 3vw;
+    }
 }
