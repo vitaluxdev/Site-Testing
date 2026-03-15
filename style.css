@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
 
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -42,12 +42,47 @@ p {
 
     height: auto;
     min-width: 100%;
+
+    transition: linear 100ms;
+}
+@media screen and (max-width: 830px) {
+    .navBar {
+        flex-direction: column;
+    }
+    .titleButton {
+        z-index: 3;
+    }
+    .separator {
+        display: none;
+    }
+    .pages {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: blue;
+    }
+    .pageButton {
+        padding-block: 25px;
+        width: 33.3333%;
+        font-size: 20px;
+    }
+    .pageButton-active {
+        padding-block: 25px;
+        width: 33.3333%;
+        font-size: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template: 
+        "a b"
+        "c d";
+    }
 }
 
 .titleButton {
     position: relative;
 
-    padding: 0.75vw;
+    padding: 10px;
     margin: 0;
     
     background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
@@ -55,9 +90,9 @@ p {
 
     box-sizing: border-box;
     box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
-    border-color: rgb(73, 76, 78);
+    border-color: rgb(46, 48, 49);
     border-style: groove;
-    border-width: 0.25vw;
+    border-width: 5px;
 
     overflow: visible;
 
@@ -72,7 +107,7 @@ p {
     color: white;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
-    border-color: rgb(73, 76, 78);
+    border-color: rgb(46, 48, 49);
     box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
 
     border-style: outset;
@@ -86,17 +121,15 @@ p {
 
 #title {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 50px;
 }
 #extension {
-    font-size: 1.5vw;
+    font-size: 35px;
 }
 #logo {
-    justify-self: center;
-    align-self: center;
     
-    margin-right: 0.5vw;
-    width: 2.5vw;
+    margin-right: 10px;
+    width: 60px;
 }
 
 /* The block inbetween the tab buttons and the siteTitle that only exists for the inset shadow */
@@ -105,8 +138,8 @@ p {
     width: 100%;
     min-height: 100%;
 
-    border-bottom: solid 1px;
-    border-color: rgb(73, 76, 78);
+    border-bottom: solid 5px;
+    border-color: rgb(46, 48, 49);
     background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
     box-sizing: border-box;
     box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
@@ -118,6 +151,8 @@ p {
 
     display: flex;
     flex-direction: row;
+
+    justify-content: center;
 }
 
 .pageButton {
@@ -130,10 +165,10 @@ p {
     user-select: none;
 
     border-style:groove;
-    border-color: rgb(73, 76, 78);
-    border-width: 0.25vw;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
 
-    padding-inline: 2vw;
+    padding-inline: 30px;
     margin: 0;
     height: 100%;
     
@@ -150,14 +185,19 @@ p {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
     box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    border-color: rgb(46, 48, 49);
 
     border-style: outset;
 }
 .pageButton:active {
     border-style: inset;
+    border-color: rgb(46, 48, 49);
 
     background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
     box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 10px 5px rgba(160, 160, 160, 0.1);
+}
+.pageButton p {
+    font-size: 20px;
 }
 
 /* While :active is an identifier for the button, .pageButton-active is just 
@@ -172,12 +212,13 @@ a version of the button that cannot be clicked and appears to be pressed down */
     user-select: none;
 
     border-style: inset;
-    border-color: rgb(73, 76, 78);
-    border-width: 0.25vw;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
 
-    padding-inline: 2vw;
+    padding-inline: 30px;
     margin: 0;
     height: 100%;
+    font-size: 20px;
     
     background: linear-gradient(to bottom, #2c2c2d 0%,#313334 17%,#313334 35%,#2c2c2d 81%,#222223 100%);
     color: rgb(245, 245, 245);
@@ -188,8 +229,8 @@ a version of the button that cannot be clicked and appears to be pressed down */
 
     transition: linear 100ms;
 }
-.buttonText {
-    font-size: 1.5vw;
+.pageButton-active p {
+    font-size: 20px;
 }
 
 /* Now this is the actual page contents, when making a new page ignore the navbar */
@@ -226,16 +267,11 @@ a version of the button that cannot be clicked and appears to be pressed down */
     font-size: 1.5vw;
 }
 
-
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-
-    margin-top: 4vw;
+    display: grid;
+    grid-template: 
+    "a b"
+    "c d";
 }
 .profile {
     display: flex;
@@ -243,34 +279,108 @@ a version of the button that cannot be clicked and appears to be pressed down */
     justify-content: center;
     align-items: center;
 
-    width: 80%;
+    width: auto;
     height: auto;
     padding: 0;
 }
-.profilePhoto {
-    margin-right: auto;
-    padding-block: 4vw;
-    padding-inline: 4vw;
+.profileImage {
 
-    width: 40vw;
+    margin-right: auto;
+    padding-block: 25px;
+    padding-inline: 25px;
+
+    width: 30vw;
 }
-.profileImg {
+
+.profileImgButton {
+    user-select: none;
+    display: flex;
     width: 100%;
-    margin: 0vw;
-    padding: 0vw;
+    margin: 0px;
+    padding: 0px;
+
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+    border-style: groove;
+    background-color: transparent;
+
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.3);
+
+    transition: linear 100ms;
 }
+.profileImgButton:hover {
+    border-style: outset;
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.profileImgButton img {
+    width: 100%;
+    z-index: -1;
+}
+
 .profileDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
     color: white;
     width: 100%;
-
-    padding-right: 4vw;
+    height: 100%;
 }
 .profileName {
-    padding-top: 2vw;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: bold;
+    padding-right: 0;
 }
 .profileTitle {
+    padding-top: 25px;
+    width: 100%;
+    font-size: 2vw;
+}
+
+.profileButton {
+    user-select: none;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style:groove;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+
+    padding-inline: 10%;
+    padding-block: 10%;
+    margin: 0;
+    margin-top: 10%;
+    height: 30%;
+    font-size: 2vw;
+    
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    color: white;
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+
+.profileButton:hover {
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+
+    border-style: outset;
+}
+.profileButton:active {
+    border-style: inset;
+}
+
+.profileLink {
     padding-top: 1.5vw;
     font-size: 3vw;
 }
@@ -300,7 +410,7 @@ a version of the button that cannot be clicked and appears to be pressed down */
     margin: 0vw;
     padding: 0vw;
 
-    border-color: rgb(73, 76, 78);
+    border-color: rgb(46, 48, 49);
     border-width: 0.5vw;
     border-style: groove;
     background-color: transparent;
@@ -310,7 +420,6 @@ a version of the button that cannot be clicked and appears to be pressed down */
     transition: linear 100ms;
 }
 .projectImage button:hover {
-    border-color: rgb(73, 76, 78);
     border-width: 0.5vw;
     border-style: outset;
     box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
@@ -345,20 +454,16 @@ a version of the button that cannot be clicked and appears to be pressed down */
 
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
     /*padding-block: 0.75vw;*/
     margin-top: auto;
 
-    background-color: rgb(50, 52, 52);
     /*box-shadow:  0 0 10px 5px rgba(0, 0, 0, 0.2);*/
     box-shadow:  0 0 30px 20px rgba(0, 0, 0, 0.2);
 
     font-size: 10vw;
 
     /*min-height: 3.25vw;*/
-    height: 0vh;
     min-width: 100vw;
 }
 
